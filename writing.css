@@ -1,0 +1,128 @@
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    background-color: rgb(224, 227, 233);;
+    height: 100vh;
+}
+
+.dark-mode {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+#themeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    font-size: 1.2em;
+    transition: border-color 0.3s ease;
+    z-index: 1000;
+}
+
+#themeButton.dark-mode {
+    border-color: #555;
+}
+
+#themeButton i {
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #writingThemeButton i {
+    color: white !important;
+}
+
+#backgroundMarco {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dark-mode #backgroundMarco {
+    color: rgba(255, 255, 255, 0.1);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+#activitiesButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px; /* Add padding */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1em; /* Adjust font size */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow */
+    z-index: 1000;
+}
+
+#activitiesButton:hover {
+    background-color: #43A047; /* Darker green on hover */
+    transform: translateY(-2px); /* Slightly lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+.dark-mode #activitiesButton {
+    background-color: #312abb; /* Orange background in dark mode */
+}
+
+.dark-mode #activitiesButton:hover {
+    background-color: #1c105b; /* Darker orange on hover in dark mode */
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar h2 {
+    padding: 8px 8px 8px 32px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar.dark-mode{
+    background-color: #222;
+    color: #eee;
+}
+#themeButton i {
+    color: black; /* Default color for light mode */
+    transition: color 0.3s ease;
+}
+
+.dark-mode #themeButton i {
+    color: white !important; /* Color for dark mode */
+}

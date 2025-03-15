@@ -1,31 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Select elements
-    const themeButton = document.getElementById("themeButton");
-    const body = document.body;
-
-    // Load saved theme
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeButton.classList.add("dark-mode");
-        themeButton.querySelector("i").classList.replace("fa-sun", "fa-moon");
-    }
-
-    // Toggle dark mode
-    themeButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        themeButton.classList.toggle("dark-mode");
-
-        // Change icon
-        const icon = themeButton.querySelector("i");
-        if (body.classList.contains("dark-mode")) {
-            icon.classList.replace("fa-sun", "fa-moon");
-            localStorage.setItem("theme", "dark");
-        } else {
-            icon.classList.replace("fa-moon", "fa-sun");
-            localStorage.setItem("theme", "light");
-        }
-    });
-
     // Password visibility toggles
     setupPasswordToggle("signupPassword", "signupPasswordToggle");
     setupPasswordToggle("loginPassword", "loginPasswordToggle");

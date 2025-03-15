@@ -697,5 +697,8 @@ nav a:hover {
   cursor: pointer;
   color: grey;
 }
-
+.dark-mode #themeButton i {
+  color: white !important;
+}
 /* ... (rest of your CSS) ... */
+
